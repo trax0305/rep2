@@ -1,20 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      ma liste
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item *ngFor="let item of eleve" (click)="affDetail(item)">
+    <ion-label>
+      <h2> {{item.prenom.toUpperCase()}}  {{item.nom.toUpperCase()}}</h2>
+      <p>{{item.date_naissance}}</p>
+    </ion-label>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button (click)="film()">lien flim</ion-button>
+
 </ion-content>

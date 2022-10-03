@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>film</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let item of listFilm" (click)="DetailFilm(item)">
+    <ion-avatar>
+      <img src={{item.posterUrl}}>
+    </ion-avatar>
+    <ion-label>
+      <h2> {{item.title}}  {{item.year}}</h2>
+    </ion-label>
+  </ion-item>
+</ion-content>
